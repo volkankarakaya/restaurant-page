@@ -53,6 +53,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Restaurant Page',
             filename:'index.html',
+            template:'src/template.html',
         }),
     ],
 };

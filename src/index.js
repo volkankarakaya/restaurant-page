@@ -1,10 +1,7 @@
 import img from './background.jpg';
 import './style.css';
 
-const content = document.createElement('div');
-content.setAttribute('id','content' )
-const body = document.querySelector('body');
-body.appendChild(content)
+const content = document.getElementById('content')
 
 
 const headingElement = document.createElement('h1')
