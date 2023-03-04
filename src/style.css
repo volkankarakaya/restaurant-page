@@ -1,3 +1,33 @@
-.content{
-    background: url('./background.jpg');
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+:root{
+    --background-color: rgba(22, 163, 74, 0.5);
+    font-size: 24px;
+}
+
+body{
+    background: url('./background-image1.jpg');
+    background-size:cover;
+    color: white;
+}
+
+header{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:32px
+
+}
+
+
+
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    list-style: none;
 }

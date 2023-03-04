@@ -48,6 +48,7 @@ module.exports = {
             },
         ],
     },
+    mode:'development',
 
     plugins:[
         new HtmlWebpackPlugin({
@@ -56,4 +57,8 @@ module.exports = {
             template:'src/template.html',
         }),
     ],
+    performance:{
+        maxAssetSize:50000,
+        maxEntrypointSize:50000,
+    },
 };

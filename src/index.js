@@ -1,19 +1,28 @@
-import img from './background.jpg';
-import './style.css';
+import img from "./background-image1.jpg";
+import "./style.css";
 
-const content = document.getElementById('content')
+const content = document.getElementById("content");
 
+// const imgElement = new Image()
+// imgElement.src = img;
+// imgElement.setAttribute('width','800')
+// content.appendChild(imgElement)
 
-const headingElement = document.createElement('h1')
-headingElement.innerHTML = "Welcome to the Acme Restaurant!"
-content.appendChild(headingElement);
+const header = document.createElement("header");
+const pageTitle = document.createElement('h1')
+pageTitle.textContent = "Healty Bean Vegan Restaurant"
 
-const paraElement = document.createElement('p');
-paraElement.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolore consequuntur placeat voluptatem necessitatibus a dolor possimus excepturi ab voluptas?"
-content.appendChild(paraElement)
+const unorderedList = document.createElement("ul");
+const listItemHome = document.createElement("li");
+listItemHome.innerHTML = "Home";
+const listItemMenu = document.createElement("li");
+listItemMenu.innerHTML = "Menu";
+const listItemAbout = document.createElement("li");
+listItemAbout.innerHTML = "About";
 
-const imgElement = new Image()
-imgElement.src = img;
-imgElement.setAttribute('width','800')
-
-content.appendChild(imgElement)
+unorderedList.appendChild(listItemHome)
+unorderedList.appendChild(listItemMenu)
+unorderedList.appendChild(listItemAbout)
+header.appendChild(pageTitle)
+header.appendChild(unorderedList)
+content.appendChild(header)
