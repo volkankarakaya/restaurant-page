@@ -2,6 +2,42 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _images_location_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/location.png */ "./src/images/location.png");
+
+function getContactContent() {
+  var content = document.getElementById('content');
+  content.innerHTML = "";
+  var flexContainerContact = document.createElement('div');
+  flexContainerContact.setAttribute('id', 'flex-container-contact');
+  var contact = document.createElement('div');
+  contact.setAttribute('id', 'contact');
+  var telephone = document.createElement('p');
+  telephone.innerHTML = '(904) 777-45-26';
+  var address = document.createElement('p');
+  address.innerHTML = '10450 San Jose Blvd Jacksonville Florida';
+  var location = document.createElement('img');
+  location.src = _images_location_png__WEBPACK_IMPORTED_MODULE_0__;
+  contact.appendChild(telephone);
+  contact.appendChild(address);
+  contact.appendChild(location);
+  flexContainerContact.appendChild(contact);
+  content.appendChild(flexContainerContact);
+}
+;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getContactContent);
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -12,18 +48,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _chief_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chief.jpg */ "./src/chief.jpg");
+/* harmony import */ var _images_chief_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/chief.jpg */ "./src/images/chief.jpg");
 
 function getHomeContent() {
+  var content = document.querySelector("#content");
+  content.innerHTML = "";
   var chiefImage = document.createElement("img");
-  chiefImage.src = _chief_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  chiefImage.src = _images_chief_jpg__WEBPACK_IMPORTED_MODULE_0__;
   chiefImage.setAttribute('width', '700px');
+  chiefImage.setAttribute('id', 'chief-image');
+  var para1 = document.createElement('p');
+  para1.innerHTML = 'Best Vegan Restaurant in Town!';
+  var para2 = document.createElement('p');
+  para2.innerHTML = 'Chief Abra Kadabra cooks best vegan dishes since 1983!';
+  var flexContainer = document.createElement('div');
+  flexContainer.setAttribute('id', 'flex-container');
   var mainContent = document.createElement("div");
+  mainContent.setAttribute('id', 'home-main');
+  mainContent.appendChild(para1);
   mainContent.appendChild(chiefImage);
-  var body = document.querySelector("body");
-  body.appendChild(mainContent);
+  mainContent.appendChild(para2);
+  content.appendChild(flexContainer);
+  flexContainer.appendChild(mainContent);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getHomeContent);
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function getMenuContent() {
+  var content = document.getElementById('content');
+  content.innerHTML = '';
+  var flexContainerMenu = document.createElement('div');
+  flexContainerMenu.setAttribute('id', 'flex-container-menu');
+  var menu = document.createElement('div');
+  menu.setAttribute('class', 'menu');
+  var mainDishesDiv = document.createElement('div');
+  mainDishesDiv.setAttribute('class', 'menu-item');
+  var mainDishesPara = document.createElement('p');
+  mainDishesPara.innerHTML = 'Main Dishes';
+  mainDishesDiv.appendChild(mainDishesPara);
+  var veganBurgersDiv = document.createElement('div');
+  veganBurgersDiv.setAttribute('class', 'menu-item');
+  var veganBurgersPara = document.createElement('p');
+  veganBurgersPara.innerHTML = 'Vegan Burgers';
+  veganBurgersDiv.appendChild(veganBurgersPara);
+  var pastasDiv = document.createElement('div');
+  pastasDiv.setAttribute('class', 'menu-item');
+  var pastasPara = document.createElement('p');
+  pastasPara.innerHTML = 'Pastas';
+  pastasDiv.appendChild(pastasPara);
+  var desertsDiv = document.createElement('div');
+  desertsDiv.setAttribute('class', 'menu-item');
+  var desertsPara = document.createElement('p');
+  desertsPara.innerHTML = 'Deserts';
+  desertsDiv.appendChild(desertsPara);
+  menu.appendChild(mainDishesDiv);
+  menu.appendChild(veganBurgersDiv);
+  menu.appendChild(pastasDiv);
+  menu.appendChild(desertsDiv);
+  content.appendChild(flexContainerMenu);
+  flexContainerMenu.appendChild(menu);
+}
+;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getMenuContent);
 
 /***/ }),
 
@@ -47,11 +144,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./background-image1.jpg */ "./src/background-image1.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./images/background-image1.jpg */ "./src/images/background-image1.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*, *::before, *::after{\n    box-sizing: border-box;\n    margin: 0px;\n}\n\n:root{\n    --background-color: rgba(22, 163, 74, 0.5);\n    font-size: 24px;\n}\n\nbody{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size:cover;\n    color: white;\n}\n\nheader{\n    background-color: var(--background-color);\n    display: flex;\n    flex-direction: column;\n    text-align: center;\n    gap:32px\n\n}\n\n\n\nul{\n    display: flex;\n    justify-content: center;\n    gap: 64px;\n    list-style: none;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,0CAA0C;IAC1C,eAAe;AACnB;;AAEA;IACI,mDAA0C;IAC1C,qBAAqB;IACrB,YAAY;AAChB;;AAEA;IACI,yCAAyC;IACzC,aAAa;IACb,sBAAsB;IACtB,kBAAkB;IAClB;;AAEJ;;;;AAIA;IACI,aAAa;IACb,uBAAuB;IACvB,SAAS;IACT,gBAAgB;AACpB","sourcesContent":["*, *::before, *::after{\n    box-sizing: border-box;\n    margin: 0px;\n}\n\n:root{\n    --background-color: rgba(22, 163, 74, 0.5);\n    font-size: 24px;\n}\n\nbody{\n    background: url('./background-image1.jpg');\n    background-size:cover;\n    color: white;\n}\n\nheader{\n    background-color: var(--background-color);\n    display: flex;\n    flex-direction: column;\n    text-align: center;\n    gap:32px\n\n}\n\n\n\nul{\n    display: flex;\n    justify-content: center;\n    gap: 64px;\n    list-style: none;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*, *::before, *::after{\n    box-sizing: border-box;\n    margin: 0px;\n}\n\n:root{\n    --background-color: rgba(22, 163, 74, 0.7);\n    font-size: 24px;\n}\n\nbody{\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size:cover;\n    color: white;\n}\n\nheader{\n    background-color: var(--background-color);\n    display: flex;\n    flex-direction: column;\n    text-align: center;\n    gap:32px;\n    margin-bottom: 160px;\n\n}\n\n\n\nul{\n    display: flex;\n    justify-content: center;\n    gap: 64px;\n    list-style: none;\n}\n\n#chief-image{\n    border-radius: 50%;\n}\n\n#home-main{\n    background: var(--background-color);\n    margin-top: 160px;\n    width: 50vw;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n}\n\n#flex-container{\n    display: flex;\n    justify-content: center;\n    \n}\n\n\n\n#flex-container-menu{\n    display: flex;\n    justify-content: center;\n    margin-top: 160px;\n    \n}\n\n.menu{\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n    justify-content: center;\n}\n\n.menu-item{\n    width: 75vw;\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    background: var(--background-color);\n    height: 160px;\n}\n\n#flex-container-contact{\n    display: flex;\n    justify-content: center;\n}\n\n#contact{\n    width: 40vw;\n    background: var(--background-color);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: start;\n    padding: 32px 64px;\n    gap: 32px;\n\n\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,0CAA0C;IAC1C,eAAe;AACnB;;AAEA;IACI,mDAAiD;IACjD,qBAAqB;IACrB,YAAY;AAChB;;AAEA;IACI,yCAAyC;IACzC,aAAa;IACb,sBAAsB;IACtB,kBAAkB;IAClB,QAAQ;IACR,oBAAoB;;AAExB;;;;AAIA;IACI,aAAa;IACb,uBAAuB;IACvB,SAAS;IACT,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,mCAAmC;IACnC,iBAAiB;IACjB,WAAW;IACX,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,uBAAuB;;AAE3B;;;;AAIA;IACI,aAAa;IACb,uBAAuB;IACvB,iBAAiB;;AAErB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,WAAW;IACX,aAAa;;IAEb,uBAAuB;IACvB,mBAAmB;IACnB,mCAAmC;IACnC,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,uBAAuB;AAC3B;;AAEA;IACI,WAAW;IACX,mCAAmC;IACnC,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,kBAAkB;IAClB,kBAAkB;IAClB,SAAS;;;AAGb","sourcesContent":["*, *::before, *::after{\n    box-sizing: border-box;\n    margin: 0px;\n}\n\n:root{\n    --background-color: rgba(22, 163, 74, 0.7);\n    font-size: 24px;\n}\n\nbody{\n    background: url('./images/background-image1.jpg');\n    background-size:cover;\n    color: white;\n}\n\nheader{\n    background-color: var(--background-color);\n    display: flex;\n    flex-direction: column;\n    text-align: center;\n    gap:32px;\n    margin-bottom: 160px;\n\n}\n\n\n\nul{\n    display: flex;\n    justify-content: center;\n    gap: 64px;\n    list-style: none;\n}\n\n#chief-image{\n    border-radius: 50%;\n}\n\n#home-main{\n    background: var(--background-color);\n    margin-top: 160px;\n    width: 50vw;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n}\n\n#flex-container{\n    display: flex;\n    justify-content: center;\n    \n}\n\n\n\n#flex-container-menu{\n    display: flex;\n    justify-content: center;\n    margin-top: 160px;\n    \n}\n\n.menu{\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n    justify-content: center;\n}\n\n.menu-item{\n    width: 75vw;\n    display: flex;\n    \n    justify-content: center;\n    align-items: center;\n    background: var(--background-color);\n    height: 160px;\n}\n\n#flex-container-contact{\n    display: flex;\n    justify-content: center;\n}\n\n#contact{\n    width: 40vw;\n    background: var(--background-color);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: start;\n    padding: 32px 64px;\n    gap: 32px;\n\n\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -572,23 +669,33 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/background-image1.jpg":
-/*!***********************************!*\
-  !*** ./src/background-image1.jpg ***!
-  \***********************************/
+/***/ "./src/images/background-image1.jpg":
+/*!******************************************!*\
+  !*** ./src/images/background-image1.jpg ***!
+  \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "background-image1.jpg";
 
 /***/ }),
 
-/***/ "./src/chief.jpg":
-/*!***********************!*\
-  !*** ./src/chief.jpg ***!
-  \***********************/
+/***/ "./src/images/chief.jpg":
+/*!******************************!*\
+  !*** ./src/images/chief.jpg ***!
+  \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "chief.jpg";
+
+/***/ }),
+
+/***/ "./src/images/location.png":
+/*!*********************************!*\
+  !*** ./src/images/location.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "location.png";
 
 /***/ })
 
@@ -733,10 +840,14 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _background_image1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./background-image1.jpg */ "./src/background-image1.jpg");
-/* harmony import */ var _chief_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chief.jpg */ "./src/chief.jpg");
+/* harmony import */ var _images_background_image1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./images/background-image1.jpg */ "./src/images/background-image1.jpg");
+/* harmony import */ var _images_chief_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/chief.jpg */ "./src/images/chief.jpg");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home */ "./src/home.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
+/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contact */ "./src/contact.js");
+
+
 
 
 
@@ -748,33 +859,30 @@ var content = document.getElementById("content");
 // imgElement.setAttribute('width','800')
 // content.appendChild(imgElement)
 
-var header = document.createElement("header");
+var header = document.querySelector("header");
 var pageTitle = document.createElement("h1");
 pageTitle.textContent = "Healty Bean Vegan Restaurant";
+var body = document.querySelector('body');
 var unorderedList = document.createElement("ul");
 var listItemHome = document.createElement("li");
 listItemHome.innerHTML = "Home";
 var listItemMenu = document.createElement("li");
 listItemMenu.innerHTML = "Menu";
-var listItemAbout = document.createElement("li");
-listItemAbout.innerHTML = "About";
+var listItemContact = document.createElement("li");
+listItemContact.innerHTML = "Contact";
 unorderedList.appendChild(listItemHome);
 unorderedList.appendChild(listItemMenu);
-unorderedList.appendChild(listItemAbout);
+unorderedList.appendChild(listItemContact);
 header.appendChild(pageTitle);
 header.appendChild(unorderedList);
-content.appendChild(header);
-(0,_home__WEBPACK_IMPORTED_MODULE_3__["default"])();
+// body.appendChild(header);
 
-// const chiefImage = document.createElement('img');
-// chiefImage.src = chief;
-
-// const mainContent = document.createElement("div");
-// mainContent.appendChild(chiefImage);
-// const body = document.querySelector("body");
-// body.appendChild(mainContent);
+// getHomeContent();
+listItemHome.addEventListener('click', _home__WEBPACK_IMPORTED_MODULE_3__["default"]);
+listItemMenu.addEventListener('click', _menu__WEBPACK_IMPORTED_MODULE_4__["default"]);
+listItemContact.addEventListener('click', _contact__WEBPACK_IMPORTED_MODULE_5__["default"]);
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundel.856ee01c6e47cb27c24d.js.map
+//# sourceMappingURL=bundel.5301143072aafdd86300.js.map
