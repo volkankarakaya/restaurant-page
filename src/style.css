@@ -4,12 +4,12 @@
 }
 
 :root{
-    --background-color: rgba(22, 163, 74, 0.5);
+    --background-color: rgba(22, 163, 74, 0.7);
     font-size: 24px;
 }
 
 body{
-    background: url('./background-image1.jpg');
+    background: url('./images/background-image1.jpg');
     background-size:cover;
     color: white;
 }
@@ -30,4 +30,23 @@ ul{
     justify-content: center;
     gap: 64px;
     list-style: none;
+}
+
+#chief-image{
+    border-radius: 50%;
+}
+
+#home-main{
+    background: var(--background-color);
+    margin-top: 160px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#flexContainer{
+    display: flex;
+    justify-content: center;
 }
