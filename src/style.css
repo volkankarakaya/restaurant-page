@@ -19,7 +19,8 @@ header{
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap:32px
+    gap:32px;
+    margin-bottom: 160px;
 
 }
 
@@ -46,7 +47,52 @@ ul{
     justify-content: center;
 }
 
-#flexContainer{
+#flex-container{
     display: flex;
     justify-content: center;
+    
+}
+
+
+
+#flex-container-menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+    
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.menu-item{
+    width: 75vw;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+    height: 160px;
+}
+
+#flex-container-contact{
+    display: flex;
+    justify-content: center;
+}
+
+#contact{
+    width: 40vw;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 32px 64px;
+    gap: 32px;
+
+
 }

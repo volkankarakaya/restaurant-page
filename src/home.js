@@ -1,6 +1,9 @@
 import chief from "./images/chief.jpg";
 
 function getHomeContent() {
+  const content = document.querySelector("#content");
+  content.innerHTML="";
+  
   const chiefImage = document.createElement("img");
   chiefImage.src = chief;
   chiefImage.setAttribute('width','700px');
@@ -13,7 +16,7 @@ function getHomeContent() {
   para2.innerHTML = 'Chief Abra Kadabra cooks best vegan dishes since 1983!'
 
   const flexContainer = document.createElement('div');
-  flexContainer.setAttribute('id', 'flexContainer');
+  flexContainer.setAttribute('id', 'flex-container');
 
  
   
@@ -28,7 +31,6 @@ function getHomeContent() {
   
 
   
-  const content = document.querySelector("#content");
   content.appendChild(flexContainer);
   flexContainer.appendChild(mainContent)
   
